@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cron-editor-sample": {
+    "cron-editor-site": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cron-editor-sample",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cron-editor-sample:build"
+            "browserTarget": "cron-editor-site:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cron-editor-sample:build:production"
+              "browserTarget": "cron-editor-site:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cron-editor-sample:build"
+            "browserTarget": "cron-editor-site:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "cron-editor-sample-e2e": {
+    "cron-editor-site-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cron-editor-sample:serve"
+            "devServerTarget": "cron-editor-site:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cron-editor-sample:serve:production"
+              "devServerTarget": "cron-editor-site:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "cron-editor-sample"
+  "defaultProject": "cron-editor-site"
 }
